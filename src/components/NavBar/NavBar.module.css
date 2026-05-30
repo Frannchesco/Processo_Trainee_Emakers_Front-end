@@ -1,0 +1,113 @@
+@import url('https://fonts.googleapis.com/css2?family=Arimo:wght@400;500;600;700&display=swap');
+
+.navbar {
+  background-color: #653654;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 2rem;
+  height: 64px;
+  width: 100%;
+  box-sizing: border-box;
+  flex-wrap: nowrap; /* NUNCA quebra linha */
+}
+
+/* Esquerda: logo */
+.logoArea {
+  flex: 0 0 auto;
+  display: flex;
+  align-items: center;
+}
+
+.logoImage {
+  height: 44px;
+  width: auto;
+  display: block;
+}
+
+/* Centro: nome da marca */
+.brand {
+  font-family: 'Arimo', sans-serif;
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: white;
+  letter-spacing: 4px;
+  text-align: center;
+  flex: 1;
+}
+
+/* Direita: pesquisa + carrinho + avatar */
+.rightArea {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  flex: 0 0 auto;
+}
+
+.searchWrapper {
+  position: relative;
+  display: flex;
+  align-items: center;
+  background-color: white;
+  border-radius: 30px;
+  padding: 0.25rem 0.9rem;
+}
+
+.searchIconLeft {
+  color: #aaa;
+  margin-right: 0.4rem;
+  font-size: 0.85rem;
+  flex-shrink: 0;
+}
+
+.searchInput {
+  border: none;
+  outline: none;
+  font-size: 0.82rem;
+  width: 190px;
+  background: transparent;
+  color: #444;
+  padding: 0.3rem 0;
+}
+
+.searchInput::placeholder {
+  color: #bbb;
+}
+
+.cartIcon {
+  font-size: 1.4rem;
+  color: white;
+  cursor: pointer;
+  transition: color 0.2s;
+  flex-shrink: 0;
+}
+
+.cartIcon:hover {
+  color: #EC82B5;
+}
+
+.userIcon {
+  font-size: 1.6rem;
+  color: white;
+  cursor: pointer;
+  transition: color 0.2s;
+  flex-shrink: 0;
+}
+
+.userIcon:hover {
+  color: #EC82B5;
+}
+
+/* Responsivo - esconde a barra de pesquisa em telas pequenas */
+@media (max-width: 600px) {
+  .navbar {
+    padding: 0 1rem;
+  }
+  .searchWrapper {
+    display: none;
+  }
+  .brand {
+    font-size: 0.9rem;
+    letter-spacing: 3px;
+  }
+}

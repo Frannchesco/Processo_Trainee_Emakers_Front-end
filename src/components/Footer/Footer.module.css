@@ -1,0 +1,75 @@
+.footer {
+  background-color: #FEE9F3;
+  border-top: 2px solid #e8c8d8;
+  padding: 60px 120px;
+  display: flex;
+  justify-content: space-between;
+  gap: 60px;
+}
+.footerLinks {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+.footerLinks a {
+  font-size: 1.1rem;
+  color: #444;
+  text-decoration: none;
+}
+.footerBrand {
+  text-align: right;
+}
+.footerLogo {
+  font-size: 2.2rem;
+  font-weight: 800;
+  color: #653654;
+  letter-spacing: 4px;
+}
+.footerSub {
+  font-size: 0.9rem;
+  letter-spacing: 2px;
+  color: #999;
+}
+/* Responsivo para mobile */
+@media (max-width: 768px) {
+  .footer {
+    flex-direction: column;      
+    padding: 30px 20px;          
+    gap: 30px;                   
+    text-align: center;          
+  }
+
+  .footerLinks {
+    align-items: center;        
+    gap: 8px;
+  }
+
+  .footerBrand {
+    text-align: center;         
+  }
+
+  .footerLogo {
+    font-size: 1.8rem;           
+  }
+
+  .footerSub {
+    font-size: 0.75rem;          
+  }
+}
+/* Esconde os links no mobile */
+@media (max-width: 768px) {
+  .footerLinks {
+    display: none;
+  }
+
+  /* Opcional: ajusta o espaçamento e alinhamento da marca */
+  .footer {
+    justify-content: center;
+    text-align: center;
+    padding: 30px 20px;
+  }
+
+  .footerBrand {
+    text-align: center;
+  }
+}

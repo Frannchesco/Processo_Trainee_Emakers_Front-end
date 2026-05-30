@@ -1,0 +1,165 @@
+.page {
+  background-color: #FEE9F3;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  font-family: 'Open Sans', sans-serif;
+}
+
+.main {
+  flex: 1;
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 2rem;
+  width: 100%;
+  text-align: left; /* alinhamento geral à esquerda */
+}
+
+.title {
+  font-family: 'Open Sans', sans-serif;
+  font-size: 2.5rem;
+  text-align: left;
+  color: #87154C;
+  margin-bottom: 2rem;
+}
+
+.exampleBox {
+  background-color: white;
+  border-radius: 20px; /* menos arredondado */
+  padding: 1rem 1.5rem;
+  display: inline-flex;
+  align-items: center;
+  gap: 1rem;
+  margin-bottom: 1.5rem;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+  width: 100%;
+  max-width: 600px; /* mais comprida */
+}
+.qIcon {
+  background-color: #87154C;
+  color: white;
+  width: 32px;
+  height: 32px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  font-weight: bold;
+}
+.exampleBox p {
+  margin: 0;
+  font-size: 1rem;
+  color: #222;
+}
+
+.popular {
+  background-color: transparent;
+  padding: 0.8rem 1.5rem;
+  border-radius: 20px; /* menos arredondado */
+  margin-bottom: 2rem;
+  font-size: 0.95rem;
+  color: #67103A;
+  max-width: 800px;
+}
+
+.subtitle {
+  font-family: 'Open Sans', sans-serif;
+  font-size: 1.8rem;
+  margin: 2rem 0 1rem;
+  color: #67103A;
+  text-align: left;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1.5rem;
+  margin-bottom: 3rem;
+}
+
+.card {
+  background-color: white;
+  border-radius: 20px;
+  padding: 1rem 1.5rem;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+  transition: transform 0.2s;
+  border: 2px solid #67103A;
+}
+.card:hover {
+  transform: translateY(-3px);
+}
+.emojiSpace {
+  display: block;
+  margin-bottom: 16px;
+}
+.emojiSpace img {
+  width: 48px;   /* ou o tamanho desejado – ajuste aqui */
+  height: auto;
+  display: block;
+}
+
+.card ul {
+  margin: 0;
+  padding-left: 1.2rem;
+  clear: both;   /* garante que não haja flutuação */
+}
+.card li {
+  margin-bottom: 0.6rem;
+  color: #444;
+  cursor: pointer;
+  transition: color 0.2s;
+}
+.card li:hover {
+  color: #F851A2;
+}
+
+.quickLinks {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-start; /* alinhado à esquerda */
+  gap: 2rem;
+  padding: 1rem 0;
+  border-top: 1px solid #e0c0d0;
+  border-bottom: 1px solid #e0c0d0;
+  margin-bottom: 1rem;
+  font-size: 0.9rem;
+}
+.quickLinks span {
+  color: #555;
+  cursor: pointer;
+}
+.quickLinks span:hover {
+  color: #87154C;
+}
+
+.slogan {
+  text-align: left;
+  margin: 2rem 0;
+  font-size: 0.9rem;
+  color: #777;
+}
+.sloganLogo {
+  font-family: 'Open Sans', sans-serif;
+  font-weight: bold;
+  color: #87154C;
+  margin-right: 0.5rem;
+  letter-spacing: 2px;
+}
+
+/* Responsivo */
+@media (max-width: 1000px) {
+  .grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+@media (max-width: 600px) {
+  .grid {
+    grid-template-columns: 1fr;
+  }
+  .exampleBox {
+    max-width: 100%;
+  }
+  .quickLinks {
+    gap: 1rem;
+  }
+}

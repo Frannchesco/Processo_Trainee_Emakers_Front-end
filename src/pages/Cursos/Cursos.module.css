@@ -1,0 +1,281 @@
+@import url('https://fonts.googleapis.com/css2?family=Oxanium:wght@400;500;600;700;800&display=swap');
+
+* { box-sizing: border-box; }
+
+.pageWrapper {
+  min-height: 100vh;
+  background-color: #FEE9F3;
+  display: flex;
+  flex-direction: column;
+  font-family: 'Oxanium', sans-serif;
+}
+
+/* ── Hero ── */
+.pageHero {
+  padding: 36px 72px 36px;
+  background-color: #FEE9F3;
+}
+
+.pageTitle {
+  font-family: 'Oxanium', sans-serif;
+  font-size: 2rem;
+  font-weight: 800;
+  color: #2a0a1e;
+  margin: 0 0 10px 0;
+}
+
+.pageSubtitle {
+  font-family: 'Open Sans', sans-serif;
+  font-size: 0.82rem;
+  color: #555;
+  line-height: 1.65;
+  max-width: 520px;
+  margin: 0;
+}
+
+/* ══════════════════════════════════════
+   BLOCO de cada curso
+══════════════════════════════════════ */
+.courseBlock {
+  padding: 48px 0 8px;         /* espaço interno, o rating dará o espaçamento abaixo */
+  background-color: #FEE9F3;
+  position: relative;
+}
+
+/* ── Faixa roxa (largura total) ── */
+.courseStripe {
+  width: 100%;
+  background-color: #653654;
+  display: flex;
+  align-items: center;
+  min-height: 450px;
+  position: relative;
+  overflow: visible;
+}
+
+/* ══════════════════════════════════════
+   FOTO – tamanho e borda
+══════════════════════════════════════ */
+.stripeImage {
+  flex: 0 0 auto;
+  width: auto;
+  height: 523px;
+  max-width: 85%;
+  margin-top: -48px;
+  margin-bottom: -48px;
+  position: relative;
+  overflow: hidden;
+  border: 6px solid #EC82B5;
+  border-radius: 5px;
+  z-index: 2;
+}
+
+/* Margens laterais (120px) */
+.imageLeft .stripeImage {
+  margin-left: 120px;
+  margin-right: auto;
+}
+
+.imageRight .stripeImage {
+  margin-left: auto;
+  margin-right: 120px;
+}
+
+.stripeImg {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+/* ── Texto – justificado, padding lateral de 120px ── */
+.stripeText {
+  flex: 1;
+  max-width: 45%;
+  padding: 32px 120px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 12px;
+  color: #fff;
+}
+
+.stripeTitle {
+  font-family: 'Open Sans', sans-serif;
+  font-size: 1.6rem;
+  font-weight: 700;
+  color: #fff;
+  margin: 0;
+  text-align: justify;
+}
+
+.stripeDesc {
+  font-family: 'Open Sans', sans-serif;
+  font-size: 0.85rem;
+  color: rgba(255,255,255,0.85);
+  line-height: 1.75;
+  margin: 0;
+  white-space: pre-line;
+  text-align: justify;
+}
+
+.stripeBadge {
+  font-size: 2rem;
+  margin-bottom: -4px;
+  text-align: justify;
+}
+
+/* ── Preço + link ── */
+.priceRow {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  flex-wrap: wrap;
+  margin-top: 4px;
+}
+
+.price {
+  font-family: 'Open Sans', sans-serif;
+  font-size: 1.25rem;
+  font-weight: 800;
+  color: #fff;
+}
+
+.oldPrice {
+  font-family: 'Open Sans', sans-serif;
+  font-size: 0.78rem;
+  color: rgba(255,255,255,0.45);
+  text-decoration: line-through;
+}
+
+.verCurso {
+  font-family: 'Open Sans', sans-serif;
+  font-size: 0.82rem;
+  font-weight: 700;
+  color: #fff;
+  text-decoration: none;
+  margin-left: auto;
+  transition: opacity 0.2s;
+}
+.verCurso:hover { opacity: 0.7; }
+
+/* ── Rating – FORA da faixa, alinhado com a imagem (mesma margem lateral 120px) ── */
+.ratingRow {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding-top: 16px;      /* espaço após a faixa roxa */
+  margin-bottom: 24px;    /* espaço entre cursos */
+}
+
+.ratingLeft {
+  margin-left: 120px;      /* mesmo valor do margin-left da imagem */
+  justify-content: flex-start;
+}
+
+.ratingRight {
+  margin-right: 120px;     /* mesmo valor do margin-right da imagem */
+  justify-content: flex-end;
+  text-align: right;
+}
+
+.ratingNum {
+  font-family: 'Open Sans', sans-serif;
+  font-size: 0.8rem;
+  font-weight: 700;
+  color: #333;
+}
+
+.stars { display: flex; gap: 1px; font-size: 0.85rem; }
+.starFull  { color: #F851A2; }
+.starHalf  { color: #F851A2; opacity: 0.6; }
+.starEmpty { color: #bbb; }
+
+.reviewCount {
+  font-family: 'Open Sans', sans-serif;
+  font-size: 0.72rem;
+  color: #999;
+}
+
+/* Imagem da medalha / badge */
+.stripeBadgeImg {
+  width: 32px;
+  height: 32px;
+  object-fit: contain;
+  display: block;
+  margin-bottom: 8px;
+}
+
+/* ── Chat FAB ── */
+.chatFab {
+  position: fixed;
+  bottom: 28px;
+  right: 28px;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background: #653654;
+  color: #fff;
+  border: none;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 4px 16px rgba(101,54,84,0.45);
+  z-index: 999;
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+.chatFab:hover {
+  transform: scale(1.1);
+  box-shadow: 0 6px 24px rgba(101,54,84,0.6);
+}
+
+/* ── Responsivo ── */
+@media (max-width: 1400px) {
+  .stripeImage {
+    width: 100%;
+    max-width: 600px;
+    height: auto;
+    margin: 0 auto !important;
+  }
+  .stripeText {
+    max-width: 50%;
+    padding: 32px 40px;
+  }
+  .ratingLeft, .ratingRight {
+    margin-left: 20px;
+    margin-right: 20px;
+    justify-content: flex-start;
+  }
+}
+
+@media (max-width: 860px) {
+  .pageHero { padding: 28px 24px 20px; }
+  .courseBlock { padding: 24px 0 12px; }
+
+  .courseStripe {
+    flex-direction: column !important;
+    overflow: hidden;
+    min-height: auto;
+  }
+
+  .stripeImage {
+    width: 90%;
+    max-width: 90%;
+    height: auto;
+    margin: 20px auto !important;
+    border-width: 4px;
+  }
+
+  .stripeText {
+    max-width: 100%;
+    padding: 24px 20px;
+  }
+  .stripeTitle, .stripeDesc, .stripeBadge { text-align: justify; }
+  .verCurso { margin-left: 0; }
+  .ratingLeft, .ratingRight {
+    margin-left: 20px;
+    margin-right: 0;
+    justify-content: flex-start;
+  }
+}

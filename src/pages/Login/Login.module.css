@@ -1,0 +1,182 @@
+.page {
+  min-height: 100vh;
+  background-color: #FEF2FA;
+  font-family: 'Open Sans', sans-serif;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  position: relative;
+}
+
+.headerText {
+  text-align: center;
+  margin-bottom: 20px; 
+}
+
+/* Topo: logo e link alinhados à direita */
+.topBar {
+  position: absolute;
+  top: 28px;
+  left: 0;
+  width: 100%;
+  padding: 0 32px;
+
+  display: flex;
+  justify-content: space-between; 
+  align-items: center;
+}
+
+.logo {
+  height: 36px;
+  width: auto;
+}
+
+.signupLink {
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: #87154C;
+  text-decoration: none;
+}
+.signupLink:hover {
+  text-decoration: underline;
+}
+
+/* Card branco centralizado */
+.card {
+  background-color: #FEE9F3;
+  border-radius: 28px;
+  padding: 2rem 2rem 2rem 2rem;
+  width: 100%;
+  max-width: 400px;
+  text-align: left;
+  box-shadow: 0 8px 24px rgba(0,0,0,0.06);
+}
+
+.title {
+  font-family: 'Oxanium', sans-serif;
+  font-size: 2rem;
+  font-weight: 700;
+  color: #F851A2;
+  margin-bottom: 0.5rem;
+  text-align: center;
+}
+
+.subtitle {
+  font-family: 'Open Sans', sans-serif;
+  font-size: 0.85rem;
+  color: #67103A;
+  margin-bottom: 1.8rem;
+  text-align: center;
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+}
+
+.label {
+  font-family: 'Open Sans', sans-serif;
+  font-size: 0.8rem;
+  font-weight: 600;
+  color: #87154C;
+  margin-bottom: 4px;
+  margin-top: 12px;
+}
+.label:first-of-type {
+  margin-top: 0;
+}
+
+.input {
+  padding: 10px 14px;
+  border: 1px solid #e0c0d0;
+  border-radius: 30px;
+  font-size: 0.85rem;
+  outline: none;
+  background-color: #fff;
+}
+.input:focus {
+  border-color: #87154C;
+  box-shadow: 0 0 0 2px rgba(135,21,76,0.1);
+}
+
+.forgotLink {
+  font-family: 'Open Sans', sans-serif;
+  font-size: 0.75rem;
+  color: #F851A2;
+  text-decoration: none;
+  text-align: right;
+  margin-top: 8px;
+}
+.forgotLink:hover {
+  text-decoration: underline;
+}
+
+.button {
+  font-family: 'Open Sans', sans-serif;
+  background-color: #F851A2;
+  color: white;
+  border: none;
+  border-radius: 40px;
+  padding: 10px;
+  font-size: 0.9rem;
+  font-weight: bold;
+  cursor: pointer;
+  margin-top: 24px;
+  transition: background 0.2s;
+}
+.button:hover {
+  background-color: #a52060;
+}
+
+.helpText {
+  font-family: 'Open Sans', sans-serif;
+  font-size: 0.75rem;
+  color: #87154C;
+  text-align: center;
+  margin-top: 20px;
+}
+
+/* ── Ajustes exclusivos para mobile (largura até 768px) ── */
+@media (max-width: 768px) {
+  .page {
+    justify-content: flex-start;
+    padding-top: 40px;
+  }
+
+  .topBar {
+    position: static;
+    padding: 0 20px 20px 20px;
+    width: 100%;
+    justify-content: space-between;
+  }
+
+  .card {
+    width: 90%;
+    max-width: 90%;
+    margin: 0 auto;
+    padding: 1.5rem;
+  }
+
+  .title {
+    font-size: 1.8rem;
+  }
+
+  .subtitle {
+    font-size: 0.8rem;
+  }
+
+  .input {
+    padding: 8px 12px;
+  }
+
+  .button {
+    padding: 8px;
+  }
+
+  .helpText {
+    margin-top: 16px;
+  }
+}

@@ -1,0 +1,548 @@
+@import url('https://fonts.googleapis.com/css2?family=Oxanium:wght@400;600;700;800&display=swap');
+
+* { box-sizing: border-box; }
+
+.pageWrapper {
+  min-height: 100vh;
+  background-color: #FEE9F3;
+  display: flex;
+  flex-direction: column;
+  font-family: 'Open Sans', sans-serif;
+}
+
+/* ═══════════════════════════════════════
+   HERO
+═══════════════════════════════════════ */
+.hero {
+  display: flex;
+  align-items: center;
+  background-color: #FEE9F3;
+  min-height: 500px;
+}
+.heroContent {
+  flex: 2;
+  padding: 60px 40px 60px 120px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.heroTitle {
+  font-family: 'Oxanium', sans-serif;
+  font-size: 3.8rem;
+  font-weight: 700;
+  line-height: 1.2;
+  background: linear-gradient(135deg, #F851A2, #EC82B5);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  margin: 0 0 30px 0;
+}
+.arrowPrefix { font-weight: 800; }
+.bold { font-weight: 800; }
+.bold1 {
+  font-weight: 800;
+  color: #87154C;
+  -webkit-text-fill-color: #87154C;
+}
+.heroSubtitle {
+  font-family: 'Oxanium', sans-serif;
+  font-size: 1.8rem;
+  line-height: 1.4;
+  color: #87154C;
+  margin: 0 0 40px 0;
+}
+.searchBox {
+  display: flex;
+  align-items: center;
+  background: #fff;
+  border: 2px solid #e0c0d0;
+  border-radius: 60px;
+  padding: 16px 24px;
+  max-width: 500px;
+  gap: 15px;
+}
+.searchEmoji { font-size: 1.4rem; }
+.searchInput {
+  border: none;
+  outline: none;
+  font-family: 'Open Sans', sans-serif;
+  font-size: 1.2rem;
+  background: transparent;
+  width: 100%;
+}
+.searchInput::placeholder {
+  font-size: 1.1rem;
+  color: #aaa;
+}
+.heroMedia {
+  flex: 1;
+  position: relative;
+  display: flex;
+  align-items: stretch;
+  justify-content: flex-end;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+}
+.heroGif {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+.heroMedia::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 20%;
+  height: 100%;
+  background: linear-gradient(to right, #FEE9F3, transparent);
+  pointer-events: none;
+  z-index: 1;
+}
+
+/* ═══════════════════════════════════════
+   FAIXA ROXA
+═══════════════════════════════════════ */
+.dividerBar {
+  height: 60px;
+  background-color: #653654;
+  width: 100%;
+}
+
+/* ═══════════════════════════════════════
+   SEÇÃO CURSOS
+═══════════════════════════════════════ */
+.coursesSection {
+  background-color: #FEE9F3;
+  padding: 80px 120px;
+}
+.coursesTagline {
+  text-align: center;
+  font-size: 1.6rem;
+  font-weight: 500;
+  color: #333;
+  margin-bottom: 100px;
+}
+.coursesTitle {
+  font-family: 'Open Sans', sans-serif;
+  font-size: 2.2rem;
+  font-weight: 700;
+  color: #222;
+  margin-bottom: 120px;
+}
+.carouselWrapper {
+  display: flex;
+  align-items: center;
+  gap: 30px;
+  margin-bottom: 60px;
+}
+.carouselArrow {
+  font-size: 4rem;
+  color: #653654;
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+.cardsRow {
+  display: flex;
+  gap: 30px;
+  flex: 1;
+  justify-content: center;
+}
+.courseCard {
+  background-color: white;
+  border-radius: 20px;
+  overflow: hidden;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+  transition: transform 0.2s;
+  border: 2px solid #67103A;
+}
+.courseCard:hover { transform: translateY(-8px); }
+.imageWrapper {
+  position: relative;
+  width: 100%;
+  border-radius: 20px 20px 0 0;
+  overflow: hidden;
+}
+.courseImage {
+  width: 100%;
+  height: 350px;
+  object-fit: cover;
+  display: block;
+}
+.playOverlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.4);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+.imageWrapper:hover .playOverlay { opacity: 1; }
+.playBtn {
+  width: 50px;
+  height: 50px;
+  background-color: rgba(255, 255, 255, 0.9);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #87154C;
+  font-size: 1.5rem;
+  cursor: pointer;
+  transition: transform 0.2s;
+}
+.playBtn:hover {
+  transform: scale(1.1);
+  background-color: white;
+}
+.cardBody { padding: 28px 24px 32px; }
+.cardTitle {
+  font-size: 1.8rem;
+  font-weight: 700;
+  margin-bottom: 16px;
+}
+.cardDesc {
+  font-size: 1rem;
+  line-height: 1.5;
+  color: #555;
+  margin-bottom: 24px;
+}
+.cardLink {
+  font-size: 1rem;
+  font-weight: 600;
+  color: #653654;
+  text-decoration: none;
+}
+.allCoursesBtn {
+  display: block;
+  margin: 0 auto;
+  background: #653654;
+  color: white;
+  border: none;
+  border-radius: 50px;
+  padding: 18px 50px;
+  font-size: 1.2rem;
+  font-weight: bold;
+  cursor: pointer;
+  transition: 0.2s;
+}
+.allCoursesBtn:hover { background: #F851A2; }
+
+/* ═══════════════════════════════════════
+   SEÇÃO DIVIDIDA (features + desafio)
+═══════════════════════════════════════ */
+.splitContainer {
+  display: flex;
+  padding: 60px 120px;
+  background-color: #FEE9F3;
+  gap: 60px;
+  align-items: stretch;
+}
+.leftSide {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-end;   /* alinha as caixas à direita */
+}
+.rightSide {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Título das features alinhado à direita */
+.featuresTitle {
+  font-size: 2.2rem;
+  font-weight: 700;
+  margin-bottom: 32px;
+  text-align: right;
+}
+.featuresGrid {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  max-width: 500px;
+  width: 100%;
+  margin-left: 50px;       
+  margin-right: 200px;
+}
+.featureCard {
+  background: white;
+  border-radius: 28px;
+  padding: 24px;
+  display: flex;
+  gap: 20px;
+  align-items: flex-start;
+  border: 2px solid #67103A;
+  text-align: left;         /* conteúdo interno alinhado à esquerda */
+}
+.featureCard img {
+  width: 48px;
+  height: 48px;
+}
+.featureCardTitle {
+  font-size: 1.3rem;
+  font-weight: 700;
+  margin-bottom: 8px;
+}
+.featureCardDesc {
+  font-size: 1rem;
+  color: #555;
+  line-height: 1.4;
+}
+
+/* ── Estrutura do desafio (sem bordas extras) ── */
+.challengeWrapper {
+  width: 100%;
+  max-width: 900px;
+  border: 2px solid #67103A;
+  border-radius: 28px;
+  overflow: hidden;
+  background-color: white;
+}
+
+.iconBar {
+  background-color: white;
+  padding: 12px 24px;
+  display: flex;
+  justify-content: flex-end;
+  gap: 16px;
+}
+.iconBar img {
+  width: 24px;
+  height: 24px;
+  cursor: pointer;
+  transition: transform 0.2s;
+}
+.iconBar img:hover {
+  transform: scale(1.1);
+}
+
+.challengeCard {
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  min-height: 520px;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  border: none;            
+}
+
+.challengeContent {
+  padding: 40px;
+  max-width: 55%;
+  border-radius: 0 20px 20px 0;
+}
+
+/* Texto preto sem sombra */
+.challengeText h3,
+.challengeText p {
+  color: #000000;
+  text-shadow: none;
+}
+
+.challengeText h3 {
+  font-family: 'Oxanium', sans-serif;
+  font-size: 2rem;
+  margin-bottom: 16px;
+}
+.challengeText p {
+  font-family: 'Open Sans', sans-serif;
+  font-size: 1rem;
+  margin-bottom: 16px;
+  line-height: 1.5;
+}
+.challengeText p:first-of-type {
+  font-weight: 600;
+}
+.challengeButton {
+  background-color: #67103A;
+  color: white;
+  border: none;
+  border-radius: 40px;
+  padding: 12px 28px;
+  font-weight: bold;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background 0.2s;
+  margin-top: 8px;
+}
+.challengeButton:hover {
+  background-color: #d43f7a;
+}
+
+/* ═══════════════════════════════════════
+   FAIXA DA MARCA
+═══════════════════════════════════════ */
+.brandBar {
+  background-color: #653654;
+  padding: 40px 0;
+  text-align: center;
+}
+.brandBarText {
+  font-size: 2rem;
+  letter-spacing: 10px;
+  color: white;
+  font-weight: 700;
+}
+
+/* ═══════════════════════════════════════
+   DEPOIMENTOS
+═══════════════════════════════════════ */
+.testimonialsSection {
+  padding: 80px 120px;
+  background-color: #FEE9F3;
+}
+.testimonialsTitle {
+  font-size: 2.2rem;
+  font-weight: 700;
+  margin-bottom: 50px;
+}
+.testimonialsGrid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 30px;
+}
+.testimonialCard {
+  background: white;
+  border-radius: 32px;
+  padding: 32px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
+  border: 2px solid #67103A;
+}
+.quoteIcon {
+  font-size: 3rem;
+  color: #F851A2;
+}
+.testimonialText {
+  font-size: 1rem;
+  line-height: 1.6;
+  color: #333;
+  margin: 16px 0;
+}
+.testimonialAuthor {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  margin-top: 20px;
+}
+.authorAvatar {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  overflow: hidden;
+}
+.authorAvatar img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.authorName {
+  font-size: 1rem;
+  font-weight: 700;
+}
+.authorRole {
+  font-size: 0.85rem;
+  color: #777;
+}
+
+/* ═══════════════════════════════════════
+   COOKIE BANNER
+═══════════════════════════════════════ */
+.cookieBanner {
+  position: fixed;
+  bottom: 30px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: #67103A;
+  border-radius: 60px;
+  padding: 16px 28px;
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  z-index: 1000;
+  max-width: 700px;
+  width: auto;
+}
+.cookieBanner img { height: 32px; }
+.cookieText {
+  font-size: 1rem;
+  color: #eee;
+}
+.cookieLink { color: #F9C5E6; }
+.btnReject, .btnOk {
+  padding: 8px 20px;
+  border-radius: 40px;
+  font-size: 0.9rem;
+  font-weight: bold;
+  border: none;
+  cursor: pointer;
+}
+.btnReject {
+  background: transparent;
+  border: 1px solid #ffffff;
+  color: #ffffff;
+}
+.btnOk {
+  background: #ffffff;
+  color: #67103A;
+}
+
+/* ═══════════════════════════════════════
+   RESPONSIVO
+═══════════════════════════════════════ */
+@media (max-width: 1200px) {
+  .hero { padding-left: 60px; }
+  .heroTitle { font-size: 3rem; }
+  .coursesSection, .splitContainer {
+    padding-left: 60px;
+    padding-right: 60px;
+  }
+}
+@media (max-width: 900px) {
+  .hero {
+    flex-direction: column;
+    padding: 40px 20px;
+  }
+  .heroContent { max-width: 100%; padding: 20px 0; }
+  .heroMedia { width: 100%; height: 300px; }
+  .coursesSection { padding: 40px 20px; }
+  .cardsRow { flex-wrap: wrap; justify-content: center; }
+  .courseCard { flex: 0 0 80%; margin-bottom: 20px; }
+  .carouselArrow { display: none; }
+  .cookieBanner { flex-wrap: wrap; justify-content: center; width: 90%; border-radius: 30px; }
+  .splitContainer {
+    flex-direction: column;
+    gap: 40px;
+    padding: 40px 20px;
+  }
+  .leftSide { align-items: center; }
+  .featuresGrid { margin-left: 0; max-width: 100%; }
+  .featuresTitle { text-align: center; }
+  .rightSide { width: 100%; }
+  .challengeContent { max-width: 80%; padding: 30px; }
+  .challengeCard { min-height: 450px; }
+}
+@media (max-width: 600px) {
+  .heroTitle { font-size: 2rem; }
+  .heroSubtitle { font-size: 1.2rem; }
+  .searchBox { max-width: 100%; }
+  .coursesTagline, .coursesTitle { font-size: 1.5rem; margin-bottom: 40px; }
+  .courseImage { height: 200px; }
+  .challengeContent { max-width: 100%; padding: 20px; }
+  .iconBar { padding: 8px 16px; }
+  .iconBar img { width: 20px; height: 20px; }
+  .challengeText h3 { font-size: 1.5rem; }
+  .challengeCard { min-height: 400px; }
+}
